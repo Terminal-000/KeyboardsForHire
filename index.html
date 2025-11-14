@@ -9,7 +9,7 @@
     :root {
       --bg: #070708;
       --panel: #0f1112;
-      --muted: #9aa1a6;
+      --muted: #c4c5c7;
       --accent: #52c0ff;
       --accent2: #7ef0a6;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
@@ -58,8 +58,8 @@
     }
 
     .logo {
-      width: 256px;
-      height: 256px;
+      width: 200px;
+      height: 200px;
       border-radius: 8px;
       display: grid;
       place-items: center;
@@ -103,7 +103,7 @@
 
     .muted {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 15px;
     }
 
     .cta {
@@ -195,10 +195,10 @@
       }
 
       .sub {
-        font-size: 14px;
+        font-size: 16px;
       }
 
-      .split {
+      sub .split {
         grid-template-columns: 1fr;
         gap: 16px;
       }
@@ -237,10 +237,12 @@
         <div>
           <h1>Keyboards for Hire</h1>
           <h2>Moe Imani</h2>
-          <div class="sub">Private .NET bug-hunting, architecture and tooling — crypto only.</div>
+          <div style="font-size: 16px;" class="sub">Private .NET bug-hunting, architecture and tooling — crypto only.
+          </div>
           <!-- Single top CTA -->
           <div class="cta">
-            <a class="btn btn-primary small" href="mailto:taminarudesu@gmail.com">Hire / Contact</a>
+            <a class="btn btn-primary small" href="mailto:taminarudesu@gmail.com" style="font-size: 14px;">Hire /
+              Contact</a>
           </div>
         </div>
       </header>
