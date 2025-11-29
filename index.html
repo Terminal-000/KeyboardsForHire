@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
   <title>Moe Imani — Technical Debugging Specialist</title>
+
   <style>
     :root {
       --bg: #070708;
@@ -32,14 +33,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 36px;
+      padding: 32px;
     }
 
     .wrapper {
+      width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
-      width: 100%;
     }
 
     main.card {
@@ -50,14 +50,13 @@
       padding: 28px;
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.03);
-      overflow: hidden;
     }
 
     header {
       display: flex;
       align-items: center;
       gap: 18px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .logo {
@@ -66,53 +65,35 @@
       border-radius: 8px;
       display: grid;
       place-items: center;
-      font-family: var(--mono);
       background: #031014;
       border: 1px solid rgba(82, 192, 255, 0.12);
+      font-family: var(--mono);
       color: var(--accent);
-      font-weight: 700;
       font-size: 18px;
+      font-weight: 700;
     }
 
     h1 {
       margin: 0;
       font-size: 28px;
-      letter-spacing: 0.2px;
+      font-family: "Science Gothic";
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 4px 0 0 0;
+      font-size: 20px;
+      font-weight: 500;
     }
 
     .sub {
       color: var(--muted);
-      margin-top: 6px;
-      font-size: 13px;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 20px;
-      margin-top: 22px;
-    }
-
-    .panel {
-      background: var(--panel);
-      padding: 18px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.02);
-    }
-
-    .services li {
-      margin: 8px 0;
-    }
-
-    .muted {
-      color: var(--muted);
       font-size: 15px;
+      margin-top: 4px;
     }
 
     .cta {
-      display: flex;
-      gap: 10px;
-      margin-top: 14px;
+      margin-top: 10px;
     }
 
     .btn {
@@ -121,6 +102,7 @@
       font-weight: 600;
       cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 14px;
     }
 
     .btn-primary {
@@ -129,103 +111,73 @@
       border: none;
     }
 
-    .btn-ghost {
-      background: transparent;
-      color: var(--accent2);
-      border: 1px solid rgba(126, 240, 166, 0.08);
+    /* ---- TERMINAL ---- */
+    .terminal-box {
+      width: 100%;
+      height: 120px; /* FIXED height so page stays still */
+      background: #020304;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      margin: 18px 0 26px 0;
+      overflow: hidden;
+      font-family: var(--mono);
+      padding: 12px;
+      font-size: 14px;
+      color: #b9e3ff;
+      opacity: 0.85;
+      white-space: pre;
     }
 
-    .small {
-      font-size: 13px;
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .services li {
+      margin: 7px 0;
     }
 
     footer {
       margin-top: 20px;
       color: var(--muted);
-      font-size: 13px;
       text-align: center;
-    }
-
-    dl {
-      margin: 0;
-    }
-
-    dt {
-      font-weight: 700;
-      margin-top: 12px;
-    }
-
-    .faq p {
-      margin: 8px 0;
-      color: var(--muted);
+      font-size: 13px;
     }
 
     @media (max-width: 900px) {
       body {
-        padding: 24px 18px;
-      }
-
-      main.card {
         padding: 20px;
       }
 
-      header {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        margin-bottom: 12px;
-      }
-
-      header>div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      header h2 {
-        margin: 4px 0 0 0;
-        font-weight: 500;
-      }
-
       .logo {
-        width: 84px;
-        height: 84px;
-        margin-top: 0;
+        width: 90px;
+        height: 90px;
       }
 
-      h1 {
-        font-size: 24px !important;
-      }
-
-      .sub {
-        font-size: 16px;
-      }
-
-      sub .split {
+      .split {
         grid-template-columns: 1fr;
-        gap: 16px;
       }
 
       aside.panel {
         order: -1;
       }
 
-      .panel {
-        padding: 14px;
-      }
-
-      .cta {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      footer {
-        font-size: 12px;
+      .terminal-box {
+        height: 110px;
       }
     }
   </style>
@@ -238,81 +190,81 @@
       <header>
         <img src="assets/file.jpeg" alt="Logo" class="logo">
         <div>
-          <h1 style="font-family: Science Gothic; font-weight: bold;">Keyboards for Hire</h1>
+          <h1>Keyboards for Hire</h1>
           <h2>Moe Imani — Technical Debugging Specialist</h2>
-          <div style="font-size: 16px;" class="sub">C# ASP.NET & Blazor backend/frontend | Private bug fixes — crypto only.
-          </div>
+          <div class="sub">C# ASP.NET & Blazor · Private fixes · Crypto only</div>
+
           <div class="cta">
-            <a class="btn btn-primary small" href="mailto:taminarudesu@gmail.com" style="font-size: 14px;">Hire / Contact</a>
+            <a class="btn btn-primary" href="mailto:taminarudesu@gmail.com">Hire / Contact</a>
           </div>
         </div>
       </header>
+
+      <!-- FIXED terminal with typing animation -->
+      <div class="terminal-box" id="terminal"></div>
 
       <div class="split">
         <section>
           <div class="panel">
             <h2 style="margin-top:0">Snapshot</h2>
             <p class="muted">
-              I handle complex backend and frontend issues in C# ASP.NET and Blazor projects. If your project is
-              blocked by a bug, performance issue, or architecture problem — I diagnose, fix, and deliver a tested
-              solution.
+              I fix complex backend and frontend issues in C# ASP.NET and Blazor projects. If your project is blocked by
+              bugs or bottlenecks — I diagnose, repair, and deliver clean, tested solutions.
             </p>
 
-            <h3 style="margin-top:14px">Services I provide</h3>
+            <h3>Services I provide</h3>
             <ul class="services muted">
-              <li>Emergency debugging & hotfixes</li>
+              <li>Emergency debugging & priority hotfixes</li>
               <li>Backend & frontend performance optimization</li>
               <li>API & database structure improvements</li>
-              <li>Codebase refactoring & architectural remediation</li>
-              <li>IdentityServer, Redis, and external API integrations</li>
+              <li>Codebase refactoring & architecture remediation</li>
+              <li>IdentityServer, Redis, and API integrations</li>
               <li>CI/CD pipeline repairs & automation</li>
-              <li>Developer tooling and productivity scripts</li>
-              <li>Security quick-audits & patch guidance</li>
+              <li>Developer tooling & productivity scripts</li>
+              <li>Security quick-audits</li>
               <li>Code reviews & remediation PRs</li>
             </ul>
 
-            <h3 style="margin-top:12px">Typical deliverables</h3>
+            <h3>Deliverables</h3>
             <ul class="muted">
               <li>Patched code or PR with tests</li>
               <li>Technical summary + repro steps</li>
               <li>Before & after metrics where applicable</li>
-              <li>Optional short screencast explaining changes</li>
+              <li>Optional short screencast walkthrough</li>
             </ul>
 
-            <h3 style="margin-top:14px">Process</h3>
+            <h3>Process</h3>
             <ol class="muted">
-              <li>You send a problem description, logs, or code snippet.</li>
-              <li>I respond with a diagnostic + fixed quote or hourly estimate.</li>
-              <li>Optional live call or sample diagnostic to prove capability.</li>
-              <li>Once agreed, <strong>45% upfront (crypto)</strong>.</li>
+              <li>You send problem details, logs, or code snippet.</li>
+              <li>I reply with diagnostic + a fixed quote.</li>
+              <li>Optional live call or sample diagnostic.</li>
+              <li>Work begins after <strong>45% upfront (crypto)</strong>.</li>
               <li>Delivery → verification → final payment.</li>
             </ol>
 
-            <div style="margin-top:12px" class="muted">
-              Private work only. Payment accepted in BTC, ETH, or USDT.
-            </div>
+            <p class="muted">Payment in BTC, ETH, or USDT.</p>
           </div>
 
           <div class="panel" style="margin-top:14px">
             <h3 style="margin-top:0">Why this model</h3>
-            <p class="muted">Direct deals with crypto payments remove bureaucracy and speed up resolution. You get actual
-              fixes, not endless meetings.</p>
-
-            <h3 style="margin-top:10px">Guarantee</h3>
-            <p class="muted">If an accepted fix doesn’t resolve the agreed issue, I rework it within the defined scope.
+            <p class="muted">
+              Direct crypto transactions remove bureaucracy and speed up resolution. You get actual fixes — not endless meetings.
             </p>
 
-            <h3 style="margin-top:12px">Retention options</h3>
+            <h3>Guarantee</h3>
+            <p class="muted">If an accepted fix doesn't resolve the agreed issue, I rework it within scope.</p>
+
+            <h3>Retention options</h3>
             <ul class="muted">
-              <li><strong>Priority channel</strong> — monthly retainer, fast response.</li>
-              <li><strong>Architecture pack</strong> — full system review + diagrams + roadmap.</li>
+              <li><strong>Priority channel</strong> — monthly retainer with fast response.</li>
+              <li><strong>Architecture pack</strong> — full system review, diagrams, plan.</li>
             </ul>
           </div>
         </section>
 
         <aside class="panel">
           <h3 style="margin-top:0">Quick contact</h3>
-          <p class="muted">Prefer Telegram for fast, private communication.</p>
+          <p class="muted">Telegram is fastest for urgent issues.</p>
 
           <dl>
             <dt>Telegram</dt>
@@ -324,31 +276,59 @@
 
           <hr style="margin:16px 0; border:none; border-top:1px solid rgba(255,255,255,0.03)">
 
-          <h4 style="margin:0">Snapshot diagnostic offer</h4>
-          <p class="muted" style="margin-top:8px">
-            Send a short log, code snippet, or stack trace. I reply with a diagnostic + quote — free.
-          </p>
-
-          <div style="margin-top:12px" class="muted small">
-            Include .NET version, EF Core version, and short logs for faster results.
-          </div>
+          <h4>Snapshot diagnostic (free)</h4>
+          <p class="muted">Send a short log or stack trace. I reply with a diagnostic + quote.</p>
 
           <hr style="margin:16px 0; border:none; border-top:1px solid rgba(255,255,255,0.03)">
 
-          <h4 style="margin:0">FAQ</h4>
+          <h4>FAQ</h4>
           <div class="faq muted">
             <p><strong>Do you sign NDAs?</strong> Yes.</p>
-            <p><strong>Taxes?</strong> Handled by the client; invoices available.</p>
-            <p><strong>Test before paying?</strong> Short diagnostic is free before any deposit.</p>
+            <p><strong>Invoices?</strong> Yes; taxes handled by client.</p>
+            <p><strong>Test before paying?</strong> Free diagnostic before deposit.</p>
           </div>
         </aside>
       </div>
 
       <footer>
-        © <strong>Keyboards for Hire</strong> — private C# ASP.NET & Blazor technical fixes. Reach out via Telegram or Email.
+        © <strong>Keyboards for Hire</strong> — private C# ASP.NET & Blazor technical fixes.
       </footer>
+
     </main>
   </div>
+
+  <!-- Terminal typing animation -->
+  <script>
+    const term = document.getElementById("terminal");
+    const lines = [
+      "> Initializing...",
+      "> Reading logs...",
+      "> Tracing failure paths...",
+      "> Checking memory & stack...",
+      "> Diagnosing root cause...",
+      "> Ready."
+    ];
+
+    let i = 0;
+    let j = 0;
+
+    function type() {
+      if (i < lines.length) {
+        if (j < lines[i].length) {
+          term.textContent += lines[i][j++];
+          setTimeout(type, 25);
+        } else {
+          term.textContent += "\n";
+          i++;
+          j = 0;
+          setTimeout(type, 200);
+        }
+      }
+    }
+
+    type();
+  </script>
+
 </body>
 
 </html>
